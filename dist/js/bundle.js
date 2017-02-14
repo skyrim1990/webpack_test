@@ -97,6 +97,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//require('./index.html')
+
 __WEBPACK_IMPORTED_MODULE_0__lib_a__["a" /* log */](__WEBPACK_IMPORTED_MODULE_1__lib_b__["a" /* b */]);
 
 

@@ -21,3 +21,5 @@ b.sayB(b.B);
 */
 b().sayB("B");
 //console.log(ModelB.sayB("hello world !"));
+//
+

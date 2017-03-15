@@ -5,6 +5,19 @@ function sayA(a) {
 }
 var A = 3.1415926;
 
-sayA(A);
+var b = function () {
+	return {
+		b: "B",
+		sayB: function sayB(b) {
+			console.log(b);
+		}
+	};
+};
 
-undefined(undefined);
+sayA(A);
+/*
+var b  = B();
+b.sayB(b.B);
+*/
+b().sayB("B");
+//console.log(ModelB.sayB("hello world !"));

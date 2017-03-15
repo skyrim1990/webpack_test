@@ -1,7 +1,7 @@
 export default function(){
 	return {
-		B: "B",
-		sayB: function(){
+		b: "B",
+		sayB: function(b){
 			console.log(b);
 		}
 	}

@@ -1,0 +1,25 @@
+#prototype_v1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+
+	width: 1120px;
+	overflow: auto;
+
+	#painter_field{
+		border: 1px solid black;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	#panel{
+		border: 1px solid black;
+		width: 300px;
+		height: 600px;
+		float: right;
+	}
+
+}

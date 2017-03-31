@@ -1,0 +1,64 @@
+
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+a{
+	cursor: pointer;
+}
+.btn{
+	border-radius: 0px !important;
+}
+.panel-title{
+	font-size: 2rem;
+}
+.panel{
+	border-radius: 0px !important;
+	border: 2px solid $blue;
+	padding: 3px;
+	margin-bottom:3px !important;
+}
+.panel-heading{
+	border-radius: 0px !important;
+	background-color: $light-blue !important;
+	text-align: center;
+	color: white;
+}
+.panel-group{
+	border-radius: 0px !important;
+	margin: 0px !important;
+	padding: 2px;
+}
+.list-group-item{
+	border-radius: 0px !important;
+	border: 2px solid #ddd;
+	margin:2px 0px 0px 0px;
+	&:hover{
+		//box-shadow: inset 0px 0px 0px 2px black;
+		border: 2px solid black;
+	}
+}
+.active{
+//	background-color: $sky-blue !important;	
+}
+.form-control{
+	border-radius: 0px;
+}
+th{
+	color: white;
+	background-color: #1ABC9C !important;
+}
+td{
+	background-color: white !important;
+}
+.breadcrumb>li+li:before{
+	content: ">" !important;
+	display: inline;
+	padding-left: 0px;
+	margin: 0px;
+}

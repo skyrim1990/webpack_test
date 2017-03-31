@@ -1,0 +1,91 @@
+.row{
+	margin: 5px;
+}
+.search_section{
+	border: 1px solid black;
+}
+.list_section{
+	margin-top: 5px;
+	border: 1px solid black;
+	padding: 5px;
+	table{
+		margin-bottom: 0px !important;
+	}
+}
+.form{
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding: 20px;
+	textarea{
+		width: 100%;
+	}
+}
+.main_view{
+	padding: 5px;
+	position: absolute;
+	overflow: auto;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	min-height: 700px;
+	z-index: 100;
+}
+
+.sub_view{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+	background-color: #FFF;
+	min-height: 500px;
+	z-index: 101;
+}
+.close_view_btn{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.window_view{
+	position: fixed;
+	top: 18%;
+	left: 30%;
+	right: 30%;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 102;
+	overflow: auto;
+	.close_view_btn{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	.window_title{
+		position: absolute;	
+		top: 0px; 
+		left: 0px;
+		right: 0px;
+		color: white;
+		background-color: $light_blue;
+		text-align: center;
+		display: block;
+		margin: 0px;
+		padding: 8px;
+		height: 34px;
+	}
+	.window_content{
+		margin-top:34px;	
+		padding: 20px 40px;
+	}
+	.custom_fileuploader{
+	
+	}
+}
+
+.pointable{
+	cursor: pointer;
+}

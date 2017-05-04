@@ -149,13 +149,23 @@ function bind_btn(){
 	red_btn.onclick 	= function(){ CUR_VAL = 2; }
 	blue_btn.onclick  = function(){ CUR_VAL = 3; }
 }
- 
+/* 
 MAP = [
 	[0, 0, 3, 3],
 	[1, 0, 0, 3],
 	[1, 0, 2, 0],
 	[1, 0, 2, 2],
 ]
+*/
+ 
+MAP = [
+	[0, 1, 0, 1],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[3, 0, 0, 2],
+]
+
+
 
 // offset x: 0 y 12 * 4
 
@@ -209,17 +219,10 @@ function get_map_position(p){
 	var off_x = p.x % 64;
 	var off_y = p.y % 32; 
 
-	/*
-	var x  = j*32 + i*32 ;
-	var y  = i*16 - j*16 + 48;
-	*/
-
-
-	//var origin_y = parseInt( (p.x + p.y*2 - 96) / 64  ) ; 
-	//var origin_x = parseInt( (p.x - p.y*2) / 64 ) + 1; 
+	var origin_x = parseInt( ( (p_x / 64) + (p_y - 64 )/ 32) ); 
+	var origin_y = parseInt( ( (p_x / 64) - (p_y - 64 )/ 32) ); 
 	
-	var origin_x = parseInt( ( (p_y - 12*4 )/ 32) + (p_x / 64) );
-	var origin_y = parseInt( ( (p_y - 12*4 )/ 32) - (p_x / 64) );
+	select_rects.push({x: origin_x, y: origin_y});
 
 	console.log("x:"+ origin_x +":" +"y:"+ origin_y);
 

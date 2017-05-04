@@ -6,6 +6,9 @@ window.onload = function(){
 var click_points = [];
 var select_rects = [];
 
+var TILE_WIDTH = 64;
+var TILE_HEIGHT = 64;
+
 COLORS = {
 	WHITE : 'rgb(255, 255, 255)',
 	RED : 'rgb(255,0 ,0)',
@@ -159,10 +162,12 @@ MAP = [
 */
  
 MAP = [
-	[0, 1, 0, 1],
-	[0, 0, 0, 0],
-	[0, 0, 0, 0],
-	[3, 0, 0, 2],
+	[0, 1, 0, 1, 1, 1],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[3, 0, 0, 2, 0, 2],
 ]
 
 
@@ -170,17 +175,18 @@ MAP = [
 // offset x: 0 y 12 * 4
 
 function draw_map(ctx){
-	for(var i =0;i<4;i++  ){
-		for(var j=0; j<4; j++){
+	for(var i =0;i<6;i++  ){
+		for(var j=0; j<6; j++){
 
 			var _x  = j*64/2 + i*64/2 + 0;
-			var _y  = i*32/2 - j*32/2 + 12 * 4;
+			var _y  = i*32/2 - j*32/2 + 14 * 6;
 
 			//console.log( _x + ":" + _y );
 			(function(){
 
 			if(MAP[i][j] == 0){
 				//debugger;
+				//stroke_draw_iso(ctx, _x, _y, 64, 32, COLORS.BLACK);
 				stroke_draw_iso(ctx, _x, _y, 64, 32, COLORS.BLACK);
 				return;
 			}
@@ -219,8 +225,8 @@ function get_map_position(p){
 	var off_x = p.x % 64;
 	var off_y = p.y % 32; 
 
-	var origin_x = parseInt( ( (p_x / 64) + (p_y - 64 )/ 32) ); 
-	var origin_y = parseInt( ( (p_x / 64) - (p_y - 64 )/ 32) ); 
+	var origin_x = parseInt( ( (p_x / 64) + (p_y - 16*6 )/ 32) ); 
+	var origin_y = parseInt( ( (p_x / 64) - (p_y - 16*6 )/ 32) ); 
 	
 	select_rects.push({x: origin_x, y: origin_y});
 
@@ -236,7 +242,7 @@ function mouse_down(e){
 	var p = get_canvas_position(e);
 	click_points.push({x: p.x, y: p.y});
 	var m = get_map_position(p);
-	if(m.x >3 || m.y> 3){
+	if(m.x >5 || m.y> 5){
 		return;
 	}
 	MAP[m.x][m.y] = CUR_VAL;

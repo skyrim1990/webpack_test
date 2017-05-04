@@ -1,0 +1,21 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+canvas{
+	border: 1px solid black;
+}
+#app{
+	width: 100%;
+	overflow: auto;
+}
+#sample{
+	float: left;
+}
+#side_menu{
+	border: 1px solid black;
+	width: 200px;
+	height: 480px;
+	margin-left: 10px;
+	float: left;
+}
